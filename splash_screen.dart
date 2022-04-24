@@ -59,14 +59,22 @@ class _SplashScreenState extends State<SplashScreen>
               children: [
                 Visibility(
                   visible: !copAnimated,
-                  child: Lottie.network(
-                    'https://assets1.lottiefiles.com/private_files/lf30_bjoa8it0.json',
+                  child: Lottie.asset(
+                    'assets/coffeesplash.json',
                     controller: _coffeeController,
                     onLoaded: (composition) {
                       _coffeeController
                         ..duration = composition.duration
                         ..forward();
                     },
+                  ),
+                ),
+                Visibility(
+                  visible: copAnimated,
+                  child: Image.asset(
+                    'assets/coffeepic2.png',
+                    height: 190.0,
+                    width: 190.0,
                   ),
                 ),
                 Center(
@@ -106,9 +114,10 @@ class _BottomPart extends StatelessWidget {
             const Text(
               'Find The Best Coffee for You',
               style: TextStyle(
-                  fontSize: 27.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                fontSize: 27.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white
+              ),
             ),
             const SizedBox(height: 30.0),
             Text(
