@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFEBF3FE),
+        scaffoldBackgroundColor: Colors.cyan.shade50,
       ),
       home: HomeView(),
     );

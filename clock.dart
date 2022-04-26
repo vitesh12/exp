@@ -42,7 +42,7 @@ class _ClockState extends State<Clock> {
               ],
               shape: BoxShape.circle,
               gradient: LinearGradient(
-                colors: [Color(0xFFECF6FF), Color(0xFFCADBEB)],
+                colors: [Colors.cyanAccent.shade100, Colors.blue.shade100],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -150,9 +150,9 @@ class ClockPainter extends CustomPainter {
       centerX + 20 * sin(dateTime.hour * 6 * pi / 180),
     );
 
-    Paint centerCirclePaint = Paint()..color = Colors.red.shade100;
+    Paint centerCirclePaint = Paint()..color = Colors.red.shade500;
     Paint secondPaint = Paint()
-      ..color = Colors.red.shade100
+      ..color = Colors.red.shade500
       ..strokeWidth = 4
       ..strokeCap = StrokeCap.round;
     Paint minPaint = Paint()
