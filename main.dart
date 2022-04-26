@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:splash_screen/splash_screen.dart';
+import 'package:simple_clock/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
-  // This widget is the root of your application.
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFFEBF3FE),
+      ),
+      home: HomeView(),
     );
   }
 }
