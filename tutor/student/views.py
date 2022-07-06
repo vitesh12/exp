@@ -70,3 +70,12 @@ def studentview(request):
 
 def student_details(request):
     return render(request,'student_details.html',{'n':login.name})
+
+def send_mail(request):
+    if request.method == 'POST':
+        email = request.POST['mail']
+        messages = request.post['mes']
+        print(email)
+    else:
+        return render(request,'student_details.html')
+
